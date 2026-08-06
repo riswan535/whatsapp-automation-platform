@@ -1,0 +1,21 @@
+.layout{
+
+    display:flex;
+
+}
+
+.main-content{
+
+    width:100%;
+
+    transition:all .35s ease;
+
+    margin-left:80px;
+
+}
+
+.main-content.shift{
+
+    margin-left:260px;
+
+}

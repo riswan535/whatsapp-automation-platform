@@ -1,0 +1,285 @@
+/* =====================================================
+   WHATSAPP PAGE
+===================================================== */
+
+.whatsapp-page{
+
+    min-height:100vh;
+    background:#edf1f5;
+    padding:50px;
+    font-family:"Poppins",sans-serif;
+
+}
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.whatsapp-title{
+
+    font-size:38px;
+    color:#666;
+    font-weight:700;
+    margin-bottom:40px;
+    text-align:center;
+
+}
+
+/* =====================================================
+   STATUS CARD
+===================================================== */
+
+.status-card{
+
+    width:420px;
+    margin:0 auto 35px auto;
+
+    padding:35px;
+
+    border-radius:28px;
+
+    background:#edf1f5;
+
+    box-shadow:
+        10px 10px 20px #c9d2df,
+        -10px -10px 20px #ffffff;
+
+    text-align:center;
+
+}
+
+.status-card h3{
+
+    color:#555;
+    font-size:22px;
+    margin-bottom:20px;
+
+}
+
+.status-card p{
+
+    margin-top:12px;
+    color:#444;
+    font-size:16px;
+
+}
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.connected{
+
+    color:#16a34a;
+    font-size:20px;
+    font-weight:700;
+
+}
+
+.disconnected{
+
+    color:#ef4444;
+    font-size:20px;
+    font-weight:700;
+
+}
+
+/* =====================================================
+   WAITING CARD
+===================================================== */
+
+.waiting-card{
+
+    width:420px;
+    margin:30px auto;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    background:#edf1f5;
+
+    text-align:center;
+
+    box-shadow:
+        10px 10px 20px #c9d2df,
+        -10px -10px 20px #ffffff;
+
+}
+
+.waiting-card h3{
+
+    color:#666;
+    margin-bottom:12px;
+
+}
+
+.waiting-card p{
+
+    color:#888;
+
+}
+
+/* =====================================================
+   QR CARD
+===================================================== */
+
+.qr-card{
+
+    width:420px;
+    margin:35px auto;
+
+    padding:30px;
+
+    border-radius:28px;
+
+    background:#edf1f5;
+
+    text-align:center;
+
+    box-shadow:
+        10px 10px 20px #c9d2df,
+        -10px -10px 20px #ffffff;
+
+}
+
+.qr-card h3{
+
+    color:#555;
+    margin-bottom:20px;
+
+}
+
+.qr-card img{
+
+    width:260px;
+    height:260px;
+
+    border-radius:18px;
+
+    background:white;
+    padding:12px;
+
+    box-shadow:
+        5px 5px 12px #cfd6e5,
+        -5px -5px 12px #ffffff;
+
+}
+
+.qr-card p{
+
+    margin-top:20px;
+    color:#777;
+    font-size:15px;
+
+}
+
+/* =====================================================
+   BUTTON AREA
+===================================================== */
+
+.button-group{
+
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.connect-btn,
+.disconnect-btn{
+
+    border:none;
+    outline:none;
+
+    cursor:pointer;
+
+    padding:16px 45px;
+
+    border-radius:18px;
+
+    font-size:16px;
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+/* CONNECT */
+
+.connect-btn{
+
+    background:#ff5d5d;
+    color:white;
+
+    box-shadow:
+        6px 6px 15px rgba(255,93,93,.35),
+        -6px -6px 15px rgba(255,255,255,.9);
+
+}
+
+/* DISCONNECT */
+
+.disconnect-btn{
+
+    background:#edf1f5;
+    color:#ff5d5d;
+
+    box-shadow:
+        6px 6px 15px #cfd6e5,
+        -6px -6px 15px #ffffff;
+
+}
+
+/* HOVER */
+
+.connect-btn:hover,
+.disconnect-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* DISABLED */
+
+.connect-btn:disabled,
+.disconnect-btn:disabled{
+
+    opacity:.6;
+    cursor:not-allowed;
+    transform:none;
+
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:768px){
+
+    .whatsapp-page{
+
+        padding:25px;
+
+    }
+
+    .status-card,
+    .qr-card,
+    .waiting-card{
+
+        width:100%;
+
+    }
+
+    .qr-card img{
+
+        width:220px;
+        height:220px;
+
+    }
+
+}

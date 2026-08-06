@@ -1,0 +1,478 @@
+/* =======================================================
+   GLOBAL
+======================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    background:#edf1f7;
+}
+
+/* =======================================================
+   DASHBOARD PAGE
+======================================================= */
+
+.dashboard-page{
+
+    width:100%;
+    max-width:1500px;
+
+    margin:0 auto;
+
+    padding:35px 25px 60px;
+
+}
+
+/* =======================================================
+   HEADER
+======================================================= */
+
+.dashboard-header{
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+    margin-bottom:50px;
+
+}
+
+.dashboard-title{
+
+    font-size:56px;
+
+    font-weight:700;
+
+    color:#3f3f3f;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+/* =======================================================
+   ACTION BUTTONS
+======================================================= */
+
+.dashboard-actions{
+
+    position:absolute;
+
+    right:0;
+    top:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    align-items:stretch;
+
+}
+
+/* =======================================================
+   DASHBOARD GRID
+======================================================= */
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+/* =======================================================
+   DASHBOARD CARD
+======================================================= */
+
+.dashboard-card{
+
+    height:135px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:24px;
+
+    padding:22px;
+
+    border-radius:30px;
+
+    background:#edf1f7;
+
+    transition:.35s ease;
+
+    box-shadow:
+
+        -18px -18px 36px rgba(255,255,255,.96),
+
+         18px 18px 36px rgba(190,200,215,.95),
+
+         inset 1px 1px 1px rgba(255,255,255,.6);
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+        -22px -22px 42px rgba(255,255,255,.98),
+
+         22px 22px 42px rgba(182,193,208,.95);
+
+}
+
+/* =======================================================
+   ICON BOX
+======================================================= */
+
+.card-icon{
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:22px;
+
+    flex-shrink:0;
+
+    font-size:31px;
+
+    color:#ff7a00;
+
+    background:#edf1f7;
+
+    box-shadow:
+
+        inset 2px 2px 3px rgba(255,255,255,.65),
+
+        inset -2px -2px 3px rgba(255,255,255,.45),
+
+        -10px -10px 22px rgba(255,255,255,.95),
+
+         10px 10px 22px rgba(194,205,220,.9);
+
+}
+
+/* =======================================================
+   CARD CONTENT
+======================================================= */
+
+.card-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    flex:1;
+
+}
+
+.card-content h3{
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#5d5d5d;
+
+    margin-bottom:10px;
+
+}
+
+.card-content h1{
+
+    font-size:52px;
+
+    line-height:1;
+
+    font-weight:700;
+
+    color:#2d2d2d;
+
+    text-shadow:
+
+        1px 1px 1px rgba(255,255,255,.8);
+
+}
+
+/* =======================================================
+   ACTION BUTTONS
+======================================================= */
+
+.disconnect-btn,
+.logout-btn{
+
+    width:200px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:22px;
+
+    background:#edf1f7;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:
+        -12px -12px 24px rgba(255,255,255,.95),
+         12px 12px 24px rgba(193,205,220,.95);
+
+}
+
+/* =======================================================
+   DISCONNECT BUTTON
+======================================================= */
+
+.disconnect-btn{
+
+    color: #ff5a5a;
+
+}
+
+.disconnect-btn svg{
+
+    color: #ff5a5a;
+
+    font-size:60px;
+
+}
+
+.disconnect-btn:hover{
+
+    background: #ff5a5a;
+
+    color:white;
+
+    transform:translateY(-4px);
+
+}
+
+.disconnect-btn:hover svg{
+
+    color:white;
+
+}
+
+/* =======================================================
+   LOGOUT BUTTON
+======================================================= */
+
+.logout-btn{
+
+    color:#ff5a5a;
+
+}
+
+.logout-btn svg{
+
+    color:#ff5a5a;
+
+    font-size:22px;
+
+}
+
+.logout-btn:hover{
+
+    background:#ff5a5a;
+
+    color:white;
+
+    transform:translateY(-4px);
+
+}
+
+.logout-btn:hover svg{
+
+    color:white;
+
+}
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media(max-width:1300px){
+
+    .dashboard-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+@media(max-width:980px){
+
+    .dashboard-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .dashboard-title{
+
+        font-size:46px;
+
+    }
+
+    .dashboard-header{
+
+        flex-direction:column;
+
+        gap:25px;
+
+    }
+
+    .dashboard-actions{
+
+        position:static;
+
+        transform:none;
+
+        flex-direction:row;
+
+        justify-content:center;
+
+        gap:18px;
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .dashboard-page{
+
+        padding:20px;
+
+    }
+
+    .dashboard-title{
+
+        font-size:36px;
+
+        text-align:center;
+
+    }
+
+    .dashboard-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .dashboard-card{
+
+        height:125px;
+
+    }
+
+    .card-content h1{
+
+        font-size:44px;
+
+    }
+
+    .dashboard-actions{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        width:100%;
+
+    }
+
+    .disconnect-btn,
+    .logout-btn{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .dashboard-title{
+
+        font-size:30px;
+
+    }
+
+    .dashboard-card{
+
+        padding:18px;
+
+        gap:18px;
+
+    }
+
+    .card-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:26px;
+
+    }
+
+    .card-content h3{
+
+        font-size:15px;
+
+    }
+
+    .card-content h1{
+
+        font-size:36px;
+
+    }
+
+}

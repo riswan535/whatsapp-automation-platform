@@ -1,0 +1,212 @@
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar{
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    width:80px;
+    height:100vh;
+
+    background:#edf1f7;
+
+    padding:25px 15px;
+
+    overflow:hidden;
+
+    transition:all .35s ease;
+
+    box-shadow:
+        12px 0 30px rgba(195,205,220,.30);
+
+    z-index:1000;
+
+}
+
+/* =========================================
+   EXPANDED
+========================================= */
+
+.sidebar.open{
+
+    width:260px;
+
+}
+
+/* =========================================
+   TOP
+========================================= */
+
+.sidebar-top{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    margin-bottom:45px;
+
+}
+
+.menu-icon{
+
+    font-size:30px;
+
+    color:#555;
+
+    min-width:30px;
+
+    transition:.3s;
+
+}
+
+.menu-icon:hover{
+
+    color:#ff5a5a;
+
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.sidebar-logo{
+
+    margin-left:18px;
+
+    white-space:nowrap;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#444;
+
+}
+
+/* =========================================
+   MENU
+========================================= */
+
+.sidebar-menu{
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.sidebar-menu.show{
+
+    display:flex;
+
+}
+
+/* =========================================
+   LINKS
+========================================= */
+
+.sidebar-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:16px 18px;
+
+    text-decoration:none;
+
+    color:#555;
+
+    border-radius:20px;
+
+    background:#edf1f7;
+
+    transition:.30s;
+
+    box-shadow:
+        -7px -7px 16px rgba(255,255,255,.96),
+         7px 7px 16px rgba(195,205,220,.85);
+
+}
+
+.sidebar-link:hover{
+
+    color:#ff5a5a;
+
+    transform:translateX(4px);
+
+    box-shadow:
+        -10px -10px 20px rgba(255,255,255,.98),
+         10px 10px 20px rgba(190,200,215,.90);
+
+}
+
+.sidebar-link.active{
+
+    color:#ff5a5a;
+
+    box-shadow:
+        inset -4px -4px 8px rgba(255,255,255,.90),
+        inset 4px 4px 8px rgba(190,200,215,.75);
+
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.sidebar-link svg{
+
+    font-size:22px;
+
+    min-width:22px;
+
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.sidebar-link span{
+
+    white-space:nowrap;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:900px){
+
+.sidebar{
+
+    width:70px;
+
+}
+
+.sidebar.open{
+
+    width:230px;
+
+}
+
+}

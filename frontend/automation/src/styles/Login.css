@@ -1,0 +1,409 @@
+/* ==========================================
+   LOGIN PAGE
+========================================== */
+
+.login-page{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+    radial-gradient(circle at top left,#6d28d9 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#06b6d4 0%,transparent 35%),
+    radial-gradient(circle at center,#ec4899 0%,transparent 25%),
+    #070912;
+}
+
+/* ==========================================
+   BACKGROUND BLOBS
+========================================== */
+
+.blob{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(180px);
+    opacity: .9;
+}
+
+.blob1{
+
+    width:500px;
+    height:500px;
+
+    background:#7c3aed;
+
+    top:-180px;
+    left:-150px;
+
+}
+
+.blob2{
+
+    width:550px;
+    height:550px;
+
+    background:#00d9ff;
+
+    bottom:-220px;
+    right:-180px;
+
+}
+
+.blob3{
+
+    width:380px;
+    height:380px;
+
+    background:#ff2da8;
+
+    top:45%;
+    left:52%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+
+/* ==========================================
+   GLASS LOGIN CARD
+========================================== */
+
+.login-card{
+
+    position: relative;
+
+    width:430px;
+
+    padding:50px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(35px);
+    -webkit-backdrop-filter:blur(35px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.45),
+    inset 0 1px 1px rgba(255,255,255,.18);
+
+    transition:.35s;
+
+    z-index:10;
+
+}
+
+.login-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 30px 90px rgba(0,0,0,.55),
+    0 0 60px rgba(124,58,237,.15);
+
+}
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.title{
+
+    color:white;
+
+    text-align:center;
+
+    font-size:48px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    text-shadow:
+    0 0 20px rgba(124,58,237,.6);
+
+}
+
+
+/* ==========================================
+   SUBTITLE
+========================================== */
+
+.subtitle{
+
+    margin-top:12px;
+
+    margin-bottom:35px;
+
+    text-align:center;
+
+    color:#d0d0d0;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+
+/* ==========================================
+   INPUT GROUP
+========================================== */
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:22px;
+
+}
+
+.input-group label{
+
+    color:#ececec;
+
+    font-size:14px;
+
+    margin-bottom:8px;
+
+    font-weight:500;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+    box-sizing:border-box;
+
+}
+
+.input-group input::placeholder{
+
+    color:#9d9d9d;
+
+}
+
+.input-group input:focus{
+
+    border:1px solid #7c3aed;
+
+    background:rgba(255,255,255,.08);
+
+    box-shadow:
+    0 0 18px rgba(124,58,237,.45);
+
+}
+
+
+/* ==========================================
+   LOGIN BUTTON
+========================================== */
+
+.login-btn{
+
+    width:100%;
+
+    margin-top:12px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    90deg,
+    #7c3aed,
+    #00d9ff,
+    #ff2da8,
+    #7c3aed);
+
+    background-size:300%;
+
+    animation:gradientMove 5s linear infinite;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 30px rgba(124,58,237,.5);
+
+}
+
+@keyframes gradientMove{
+
+    0%{
+
+        background-position:0%;
+
+    }
+
+    100%{
+
+        background-position:300%;
+
+    }
+
+}
+
+
+/* ==========================================
+   REGISTER TEXT
+========================================== */
+
+.register-text{
+
+    margin-top:28px;
+
+    text-align:center;
+
+    color:#d2d2d2;
+
+    font-size:14px;
+
+}
+
+.register-text a{
+
+    margin-left:6px;
+
+    text-decoration:none;
+
+    color:#7c3aed;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.register-text a:hover{
+
+    color:#00d9ff;
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.login-card{
+
+    width:92%;
+
+    padding:35px 25px;
+
+}
+
+.title{
+
+    font-size:38px;
+
+}
+
+.subtitle{
+
+    font-size:14px;
+
+}
+
+.input-group input{
+
+    padding:14px;
+
+}
+
+.login-btn{
+
+    padding:14px;
+
+}
+
+.blob1{
+
+    width:300px;
+    height:300px;
+
+}
+
+.blob2{
+
+    width:350px;
+    height:350px;
+
+}
+
+.blob3{
+
+    width:250px;
+    height:250px;
+
+}
+
+}
+
+/* ============================
+      Chrome Autofill Fix
+============================ */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+
+    -webkit-box-shadow: 0 0 0 1000px rgba(255,255,255,.05) inset !important;
+
+    -webkit-text-fill-color: white !important;
+
+    caret-color: white;
+
+    transition: background-color 5000s ease-in-out 0s;
+
+}
