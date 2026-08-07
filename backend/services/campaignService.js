@@ -1,6 +1,6 @@
 //--------------------------------------------------------------- IMPORTS -----------------------------------------------------------------------------------------------
 
-const Campaign = require("../models/Campaign");
+const Campaign = require("../models/campaign");
 const Contact = require("../models/contacts");
 const Message = require("../models/message");
 const {getClient} = require("./whatsappService");

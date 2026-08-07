@@ -1,7 +1,7 @@
 //--------------------------------------------------------------IMPORT-------------------------------------------------------------------------------------------------------
 
 const Contacts = require("../models/contacts");
-const Campaign = require("../models/Campaign");
+const Campaign = require("../models/campaign");
 const ScheduleMessage = require("../models/scheduleMessage");
 const AutoReplay = require("../models/autoReplay");
 const Message = require("../models/message");

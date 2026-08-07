@@ -50,8 +50,6 @@ campaignSchema.index(
     { expireAfterSeconds: 0 }
 );
 
-const Campaign = mongoose.model("CAMPAIGN", campaignSchema);
-
-//---------------------------------------------------------------------------------EXPORT---------------------------------------------------------------------------------------------------------------
-
-module.exports = Campaign;
+module.exports =
+    mongoose.models.CAMPAIGN ||
+    mongoose.model("CAMPAIGN", campaignSchema);

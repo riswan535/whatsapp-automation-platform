@@ -3,11 +3,11 @@
 const User = require("../models/user");
 const {userApprovalEmail} = require("../services/emailService");
 const Contact = require("../models/contacts");
-const Campaign = require("../models/Campaign");
+const Campaign = require("../models/campaign");
 const ScheduleMessage = require("../models/scheduleMessage");
 const AutoReply = require("../models/autoReplay");
 const Message = require("../models/message");
-const Group = require("../models/Group");
+const Group = require("../models/group");
 
 //---------------------------------------------------------API FOR GET ALL USERS-------------------------------------------------------------------------------------
 const getUsers =  async (req, res) =>{

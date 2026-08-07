@@ -1,7 +1,7 @@
 //---
 
-const Group = require("../models/Group");
-const Contact = require("../models/Contacts")
+const Group = require("../models/group");
+const Contact = require("../models/contacts")
 
 //------------
 
