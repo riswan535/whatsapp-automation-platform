@@ -2,13 +2,13 @@
 
 const { Client, LocalAuth } = require("whatsapp-web.js");
 const QRCode = require("qrcode");
-const puppeteer = require("puppeteer");
 
 const Contact = require("../models/contacts");
 const Message = require("../models/message");
 const AutoReply = require("../models/autoReplay");
 
 const state = require("./whatsappState");
+const { executablePath } = require("puppeteer");
 
 
 //-------------------------------------------------------------CLIENT--------------------------------------------------------------
@@ -31,6 +31,7 @@ client = new Client({
   }),
   puppeteer: {
     headless: true,
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox"
