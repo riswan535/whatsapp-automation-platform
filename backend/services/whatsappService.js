@@ -8,7 +8,7 @@ const Message = require("../models/message");
 const AutoReply = require("../models/autoReplay");
 
 const state = require("./whatsappState");
-const { executablePath } = require("puppeteer");
+
 
 
 //-------------------------------------------------------------CLIENT--------------------------------------------------------------
