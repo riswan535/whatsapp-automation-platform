@@ -57,6 +57,13 @@ app.get("/get", (req, res) => {
     res.send("Server is Live");
 });
 
+app.get("/health", (req, res) => {
+    res.status(200).json({
+        status: "ok",
+        message: "WhatsApp Automation Backend is running"
+    });
+});
+
 //------------------------------------------------------PORT---------------------------------------------------------
 
 const PORT = process.env.PORT || 5000;
