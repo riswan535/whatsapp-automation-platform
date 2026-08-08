@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# ENV FILE
+.env
+.env.local
+.env.*.local
+frontend/automation/.env
