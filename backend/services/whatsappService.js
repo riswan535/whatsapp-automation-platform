@@ -2,12 +2,17 @@
 
 const { Client, LocalAuth } = require("whatsapp-web.js");
 const QRCode = require("qrcode");
+const puppeteer = require("puppeteer");
 
 const Contact = require("../models/contacts");
 const Message = require("../models/message");
 const AutoReply = require("../models/autoReplay");
 
 const state = require("./whatsappState");
+
+const chromePath = process.env.PUPPETEER_EXECUTABLE_PATH;
+
+console.log("Chrome executable:", chromePath);
 
 //-------------------------------------------------------------CLIENT--------------------------------------------------------------
 
@@ -29,6 +34,7 @@ client = new Client({
   }),
   puppeteer: {
     headless: true,
+    executablePath: chromePath,
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox"
