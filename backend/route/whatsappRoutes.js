@@ -37,23 +37,33 @@ router.get("/status", (req, res) => {
 //-------------------------------------------------------------CONNECT WHATSAPP-----------------------------------------------------
 
 router.post("/connect", async (req, res) => {
-  try {
-    let client = getClient();
+    try {
 
-    if (!client) {
-      client = createClient();
+        let client = getClient();
+
+        if (client) {
+            return res.json({
+                message: "WhatsApp client is already running"
+            });
+        }
+
+        client = createClient();
+
+        await client.initialize();
+
+        res.json({
+            message: "WhatsApp Initialization Started"
+        });
+
+    } catch (error) {
+
+        console.log("WhatsApp Connect Error:", error.message);
+
+        res.status(500).json({
+            message: error.message
+        });
+
     }
-
-    await client.initialize();
-
-    res.json({
-      message: "WhatsApp Initialization Started",
-    });
-  } catch (error) {
-    res.status(500).json({
-      message: error.message,
-    });
-  }
 });
 
 //-------------------------------------------------------------GET QR---------------------------------------------------------------

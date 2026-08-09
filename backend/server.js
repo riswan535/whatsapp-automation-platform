@@ -153,13 +153,6 @@ const startServer = async () => {
 
             try {
 
-                const client = createClient();
-
-                await client.initialize();
-
-                console.log("======================================");
-                console.log("WhatsApp initialization started");
-                console.log("======================================");
 
                 //--------------------------------------------------
                 // Start Hourly Backup Timer
